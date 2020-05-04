@@ -47,14 +47,14 @@ Calendario
     Dormir  1
     Texto  //input[contains(@id,'buscarfecha:anio')]  2020
     SLI     //select[@id='buscarfecha:idMes']   4
-    Resultado  .5  ${dir}/Buscar_2020.png   Se introducen los datos para el Login
-    Dormir  2
+    Resultado  .5  ${dir}/Buscar_2020.png   Buscar
+    Dormir  .5
     Click  //a[@href='#'][contains(.,'Buscar')]
     Scroll   0   600
-    Resultado  .5  ${dir}/Calendario_resultado.png   Se introducen los datos para el Login
+    Resultado  .5  ${dir}/Calendario_resultado.png   Calendario Resultados
     Click  //a[@href='#'][contains(.,'Semana')]
     Scroll   0   600
-    Resultado  .5  ${dir}/Calendario_semana.png   Se introducen los datos para el Login
+    Resultado  .5  ${dir}/Calendario_semana.png   Calendario por Semana
     Scroll  0  100
 
 
@@ -67,6 +67,15 @@ Agregar
     Click   //input[@id='busquedaAltaForm:idInputFecha']
     Click   (//a[@href='#'])[17]
     Click   (//input[contains(@type,'text')])[4]
+    Click  //div[@class='Hunter-hour-name'][contains(.,'12')]
+    Click  //li[@class='Hunter-minute'][contains(.,'30')]
+    Resultado  .5  ${dir}/Evento.png   Datos del evento.
+    Scroll  0  400
+    Texto   //div[contains(@id,'textBox')]  Carga de la Información del primer evento de prueba.
+    Scroll  200  600
+    SLL  //select[contains(@id,'busquedaAltaForm:idDependencia')]   ALTAS
+    
+
 
 
 
