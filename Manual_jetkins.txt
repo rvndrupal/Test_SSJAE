@@ -175,3 +175,24 @@ add--> jmeter.save.saveservice.output_format=xml
 ##############Simular curp y rfc #####################
 
 http://webserver01.finatrade.mx/portalempleados/curp.aspx
+
+
+############################################################
+Seleccionar por xpath
+
+//input[@type='submit']  -->Selecciona un boton de tipo submit
+
+//input[@name='name']  -->busca por el atributo del nombre
+
+//input[@name='firstname' or @arial-labe='first-name'] -->busca por los dos Atributos
+
+//select[@name='elemnto' or @class='por clase'] --> Ahora es un select por multiples atributos
+
+//select[@name='elemnto' and @class='por clase'] -->tiene que tener los dos
+
+//div[text()='texto contenido']-->selecciona un div por el texto
+
+//div[text()='texto contenido']-->selecciona un div por el texto
+
+//a[text()='link texto']-->Selecciona el texto de un link
+
