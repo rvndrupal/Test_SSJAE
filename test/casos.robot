@@ -52,6 +52,23 @@ Calendario
     Click  //a[@href='#'][contains(.,'Buscar')]
     Scroll   0   600
     Resultado  .5  ${dir}/Calendario_resultado.png   Se introducen los datos para el Login
+    Click  //a[@href='#'][contains(.,'Semana')]
+    Scroll   0   600
+    Resultado  .5  ${dir}/Calendario_semana.png   Se introducen los datos para el Login
+    Scroll  0  100
+
+
+Agregar
+    Click  //a[contains(@id,'idt9:linkAgregar')][@href='#'][contains(.,'Agregar')]
+    Scroll  0  200
+    SLL  //select[@id='busquedaAltaForm:idSlcTipoEvento']  Actividad
+    SLL  //select[contains(@id,'busquedaAltaForm:idSlcEstatus')]  En Proceso
+    Texto  //input[@id='busquedaAltaForm:idInputTitulo']  Demo del primer Evento
+    Click   //input[@id='busquedaAltaForm:idInputFecha']
+    Click   (//a[@href='#'])[17]
+    Click   (//input[contains(@type,'text')])[4]
+
+
 
 
 

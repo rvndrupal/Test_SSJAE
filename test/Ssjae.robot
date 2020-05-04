@@ -9,7 +9,7 @@ Library     FakerLibrary
 
 
 
-#robot -d resultados -i tg01  test.robot
+#robot -d resultados -i ss01  ssjae.robot
 #robot -d resultados -i rd01 -i rd02  -v navegador:firefox  test.robot
 #robot -d resultados  test.robot
 #Vinr770919hdfltd00
@@ -36,6 +36,7 @@ CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
     #Video Iniciar  
     Login   ${url}  ${navegador}
     Calendario
+    Agregar
 
     
     
