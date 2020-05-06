@@ -36,10 +36,10 @@ CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
     #Video Iniciar  
     Login   ${url}  ${navegador}
     Calendario
-    Catalagos Categorías
-    Catalogos Organizaciones
-    Catalogos Representantes
-    #Agregar
+    # Catalagos Categorías
+    # Catalogos Organizaciones
+    # Catalogos Representantes
+    Agregar
 
     
     

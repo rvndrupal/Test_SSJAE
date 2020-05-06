@@ -88,7 +88,7 @@ Catalogos Organizaciones
     Scroll  0  250
     Click  //a[@href='#'][contains(.,'Agregar organización')]
     Scroll  0  250
-    SLL     //select[contains(@name,'busquedaAltaForm:idDependencia')]   Demo dos
+    SLL     //select[contains(@name,'busquedaAltaForm:idDependencia')]   ${categoria}
     Texto  //input[contains(@id,'busquedaAltaForm:idOrganizacion')]  ${Organizacion}
     Texto  //input[@id='busquedaAltaForm:idSiglas']  Org
     Click  //a[@href='#'][contains(.,'Guardar')]
@@ -97,7 +97,7 @@ Catalogos Organizaciones
     Scroll  0  150
     Click  //a[@href='#'][contains(.,'Organizaciones')]
     Scroll  0  300
-    SLL     //select[@name='busquedaForm:idDependenciaS']   Demo dos
+    SLL     //select[@name='busquedaForm:idDependenciaS']   ${categoria}
     Click  //a[@href='#'][contains(.,'Buscar')]
     Scroll  0  400
     Resultado  .5  ${dir}/Organización.png   Se muestra la Organización
@@ -108,7 +108,7 @@ Catalogos Representantes
     Click  //a[@href='#'][contains(.,'Representantes')]
     Click  //a[contains(@id,'idt59:botonAgregar')][@href='#'][contains(.,'Agregar Representantes')]
     Scroll  0  250
-    SLL     //select[contains(@name,'formAltaRepresentante:idDependenciaAlta')]     Demo dos
+    SLL     //select[contains(@name,'formAltaRepresentante:idDependenciaAlta')]     ${categoria}
     Click   //*[@id="formAltaRepresentante:idOrganizacionAlta"]/option[2]
     Texto  //input[contains(@id,'formAltaRepresentante:nombreRepresentante')]  ${nombre}
     Texto  //input[contains(@id,'formAltaRepresentante:apellidoPRepresentante')]  ${Apellido}
@@ -156,7 +156,7 @@ Agregar
     SLL  //select[contains(@id,'busquedaAltaForm:idSlcEstatus')]  En Proceso
     Texto  //input[@id='busquedaAltaForm:idInputTitulo']  Demo del primer Evento
     Click   //input[@id='busquedaAltaForm:idInputFecha']
-    Click   (//a[@href='#'])[17]
+    Click    (//a[@href='#'])[21]
     Click   (//input[contains(@type,'text')])[4]
     Click  //div[@class='Hunter-hour-name'][contains(.,'12')]
     Click  //li[@class='Hunter-minute'][contains(.,'30')]
@@ -166,7 +166,21 @@ Agregar
     Obtener Text  //div[contains(@id,'textBox')]
     Dormir  1
     Click  (//button[contains(@type,'button')])[3]
-    SLL  //select[contains(@id,'busquedaAltaForm:idDependencia')]   ALTAS
+    SLL  //select[contains(@id,'busquedaAltaForm:idDependencia')]   ${categoria}
+    Click  //*[@id="busquedaAltaForm:idOrganizacion"]/option[2]
+    Scroll  300  700
+    Dormir  1.5
+    Click  (//span[contains(@aria-hidden,'true')])[4]
+    Click  //a[@href='#'][contains(.,'Siguiente')]
+    Resultado  .5  ${dir}/Participantes.png   Datos Participante.
+    Scroll  0  300
+    Click  //*[@id="representantesAltaForm:idSlcRepresentante"]/option[2]
+    Click  //a[@href='#'][contains(.,'Guardar')]
+    Dormir  1
+    Click   //a[@href='#'][contains(.,'Siguiente')]
+
+
+
 
     
 
