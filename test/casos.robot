@@ -164,20 +164,47 @@ Agregar
     Scroll  0  400
     Texto   //div[contains(@id,'textBox')]  Carga de la Información del primer evento de prueba.
     Obtener Text  //div[contains(@id,'textBox')]
+    Scroll  0  800
     Dormir  1
     Click  (//button[contains(@type,'button')])[3]
     SLL  //select[contains(@id,'busquedaAltaForm:idDependencia')]   ${categoria}
-    Click  //*[@id="busquedaAltaForm:idOrganizacion"]/option[2]
-    Scroll  300  700
+    Click  //*[@id="busquedaAltaForm:idOrganizacion"]/option[2]    
+    Click  (//a[@href='#'][contains(.,'Agregar')])[2]
+    Scroll  0  1600
     Dormir  1.5
-    Click  (//span[contains(@aria-hidden,'true')])[4]
-    Click  //a[@href='#'][contains(.,'Siguiente')]
-    Resultado  .5  ${dir}/Participantes.png   Datos Participante.
-    Scroll  0  300
-    Click  //*[@id="representantesAltaForm:idSlcRepresentante"]/option[2]
     Click  //a[@href='#'][contains(.,'Guardar')]
     Dormir  1
-    Click   //a[@href='#'][contains(.,'Siguiente')]
+    Click  //a[@href='#'][contains(.,'Siguiente')]
+    #Segunda Sección
+    Click  //*[@id="representantesAltaForm:idSlcRepresentante"]/option[2]
+    Click  (//a[@href='#'][contains(.,'Agregar')])[2]
+    Scroll  0  500
+    Resultado  .5  ${dir}/Participante_agregado.png   Datos del evento.
+    Click  //a[@href='#'][contains(.,'Guardar')]
+    Dormir  1
+    Scroll  0  600
+    Click  //a[@href='#'][contains(.,'Siguiente')]
+    #tercera sección
+    Scroll  0  300
+    Click  //a[@href='#'][contains(.,'Nuevo acuerdo')]
+    Texto  //textarea[contains(@id,'agregaAcuerdoForm:idAcuerdo')]  Demo del primer Acuerdo de prueba
+    Dormir  1
+    Click  //a[@id='agregaAcuerdoForm:idBotonAceptar']
+    Scroll  0  500
+    Dormir  1.5
+    Click  //input[contains(@id,'idt58')][@type='checkbox']
+    #Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
+    #SLI  //select[@id='idAcuerdosForm:table-elementos:0:idSlcEstatus']  2
+    Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
+    Dormir  1
+
+
+
+
+    
+
+
+    
 
 
 
