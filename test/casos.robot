@@ -187,16 +187,38 @@ Agregar
     #tercera sección
     Scroll  0  300
     Click  //a[@href='#'][contains(.,'Nuevo acuerdo')]
+    Dormir  1.5
     Texto  //textarea[contains(@id,'agregaAcuerdoForm:idAcuerdo')]  Demo del primer Acuerdo de prueba
     Dormir  1
     Click  //a[@id='agregaAcuerdoForm:idBotonAceptar']
     Scroll  0  500
     Dormir  1.5
     Click  //input[contains(@id,'idt58')][@type='checkbox']
+    Dormir  1.5
     #Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
     #SLI  //select[@id='idAcuerdosForm:table-elementos:0:idSlcEstatus']  2
     Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
     Dormir  1
+    #carga de los archivos
+    #Ruta  C:\\Test_ssjae\\test\\Archivos\\Febrero1.pdf
+    Click  //a[@href='#'][contains(.,'Adjuntar documento')]
+    Dormir  1.5
+    Examinar   //input[@id='cargaArchivoForm:file']     C:\\Test_ssjae\\test\\Archivos\\Febrero1.pdf
+    Dormir  1
+    Click  //a[@href='#'][contains(.,'Cargar')]
+    Scroll  0  900
+    Dormir  1
+    Click  //a[@href='#'][contains(.,'Adjuntar documento')]
+    Dormir  1.5
+    Examinar   //input[@id='cargaArchivoForm:file']     C:\\Test_ssjae\\test\\Archivos\\Febrero2.pdf
+    Dormir  1.5
+    Click  //a[@href='#'][contains(.,'Cargar')]
+    Scroll  0  900
+    Dormir  2
+    Click  //a[@href='#'][contains(.,'Guardar')]
+    Dormir  3
+
+
 
 
 
