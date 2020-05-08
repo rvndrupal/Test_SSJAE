@@ -222,7 +222,7 @@ Agregar
     Dormir  1
     Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     Dormir  3
-    Cerrar
+    
 
 
 Mostrar evento
@@ -245,6 +245,9 @@ Mostrar evento
     Scroll  0  17000
     Resultado  .5  ${dir}/Resultado_cinco.png    Se muestra Resultado cinco
     Dormir  2
+    Click  (//a[@href='#'])[15]
+    Dormir  8
+    
 
 
 

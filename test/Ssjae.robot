@@ -30,18 +30,35 @@ ${tiempo}   .1
 
 *** Test Cases ***
 CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
-    [Documentation]    PRUEBA SSJAE 001 (Login) 
+    [Documentation]    PRUEBA SSJAE 001 (HAPPY PATH) 
     [Tags]      ss01   
     Esperar Iniciar ok    15  
-    #Video Iniciar  
+    Video Iniciar  
     Login   ${url}  ${navegador}
     Calendario
     # Catalagos Categorías
     # Catalogos Organizaciones
     # Catalogos Representantes
-    #Agregar
+    Agregar
     Mostrar evento
+    Video Finalizar
     Cerrar
+
+CC001 SSJAE (SISTEMA SSJAE 001)(VERSIÓN COMPLETA )
+    [Documentation]    PRUEBA SSJAE 001 (VERSIÓN COMPLETA) 
+    [Tags]      ss02   
+    Esperar Iniciar ok    15  
+    Video Iniciar  
+    Login   ${url}  ${navegador}
+    Calendario
+    Catalagos Categorías
+    Catalogos Organizaciones
+    Catalogos Representantes
+    Agregar
+    Mostrar evento
+    Video Finalizar
+    Cerrar
+   
     
     
 
