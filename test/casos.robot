@@ -212,11 +212,16 @@ Agregar
     Dormir  1.5
     Examinar   //input[@id='cargaArchivoForm:file']     C:\\Test_ssjae\\test\\Archivos\\Febrero2.pdf
     Dormir  1.5
+    Resultado  .5  ${dir}/Carga_pdf.png   Se muestra la Organización
     Click  //a[@href='#'][contains(.,'Cargar')]
     Scroll  0  900
     Dormir  2
+    Resultado  .5  ${dir}/Mostrar_pdf_pdf.png   Se muestra la Organización
     Click  //a[@href='#'][contains(.,'Guardar')]
+    Dormir  1
+    Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     Dormir  3
+    Cerrar
 
 
 
