@@ -39,8 +39,9 @@ CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
     # Catalagos Categorías
     # Catalogos Organizaciones
     # Catalogos Representantes
-    Agregar
-
+    #Agregar
+    Mostrar evento
+    Cerrar
     
     
 

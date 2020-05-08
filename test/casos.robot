@@ -156,7 +156,8 @@ Agregar
     SLL  //select[contains(@id,'busquedaAltaForm:idSlcEstatus')]  En Proceso
     Texto  //input[@id='busquedaAltaForm:idInputTitulo']  Demo del primer Evento
     Click   //input[@id='busquedaAltaForm:idInputFecha']
-    Click    (//a[@href='#'])[21]
+    Click    (//a[@href='#'])[24] 
+    #Evento Lunes
     Click   (//input[contains(@type,'text')])[4]
     Click  //div[@class='Hunter-hour-name'][contains(.,'12')]
     Click  //li[@class='Hunter-minute'][contains(.,'30')]
@@ -222,6 +223,31 @@ Agregar
     Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     Dormir  3
     Cerrar
+
+
+Mostrar evento
+    Click  (//a[@href='#'])[1]
+    Scroll  0  650
+    Dormir  2
+    Click   (//span[@class='fc-title'][contains(.,'Demo del primer Evento')])[25]
+    Scroll  0  400
+    Resultado  .5  ${dir}/Resultado_uno.png    Se muestra Resultado uno
+    Dormir  2
+    Scroll  0  700
+    Resultado  .5  ${dir}/Resultado_dos.png    Se muestra Resultado dos
+    Dormir  2
+    Scroll  0  900
+    Resultado  .5  ${dir}/Resultado_tres.png    Se muestra Resultado tres
+    Dormir  2
+    Scroll  0  1400
+    Resultado  .5  ${dir}/Resultado_cuatro.png    Se muestra Resultado cuatro
+    Dormir  2
+    Scroll  0  17000
+    Resultado  .5  ${dir}/Resultado_cinco.png    Se muestra Resultado cinco
+    Dormir  2
+
+
+
 
 
 
