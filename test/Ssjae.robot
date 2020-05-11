@@ -23,6 +23,9 @@ ${url}          https://dessistemas.senasica.gob.mx/SSJAEWeb/login.xhtml
 ${navegador}    chrome
 ${tiempo}   .1
 
+#user         olivia.rodriguez
+#Password     senades2020
+
 
 *** Keywords ***
 
