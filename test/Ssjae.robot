@@ -65,8 +65,8 @@ CC002 SSJAE (SISTEMA SSJAE 002)(VERSIÓN COMPLETA )
     Cerrar
 
 *** Test Cases ***
-CC003 SSJAE (SISTEMA SSJAE 003)(HAPPY PATH EXCEL)
-    [Documentation]    PRUEBA SSJAE 003 (HAPPY PATH EXCEL) 
+CC003 SSJAE (SISTEMA SSJAE 003)(Categorías)
+    [Documentation]    PRUEBA SSJAE 003 (Carga Categorías) 
     [Tags]      ss03
     Esperar Iniciar ok    15  
     #Video Iniciar  
@@ -79,6 +79,23 @@ CC003 SSJAE (SISTEMA SSJAE 003)(HAPPY PATH EXCEL)
     #Mostrar evento
     #Video Finalizar
     Cerrar
+
+*** Test Cases ***
+CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
+    [Documentation]    PRUEBA SSJAE 004 (HAPPY PATH EXCEL) 
+    [Tags]      ss04
+    Esperar Iniciar ok    15  
+    #Video Iniciar  
+    Login   ${url}  ${navegador}
+    #Calendario
+    #Catalagos Categorías Excel
+    # Catalogos Organizaciones
+    # Catalogos Representantes
+    Agregar Excel
+    #Mostrar evento
+    #Video Finalizar
+    Cerrar
+
 
    
     

@@ -158,23 +158,6 @@ Catalogos Representantes
     Resultado  .5  ${dir}/Representante.png   Se muestra el Representante
 
 
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Agregar
     Click  //a[contains(@id,'idt9:linkAgregar')][@href='#'][contains(.,'Agregar')]
@@ -249,7 +232,8 @@ Agregar
     Dormir  1
     Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     Dormir  3
-    
+
+ 
 
 
 Mostrar evento
@@ -274,6 +258,89 @@ Mostrar evento
     Dormir  2
     Click  (//a[@href='#'])[15]
     Dormir  8
+
+
+
+Agregar Excel
+    ${rows}=   Leer numero de filas  Hoja1
+    : FOR  ${i}  IN RANGE     1  ${rows}+1
+    \   Click  //a[contains(@id,'idt9:linkAgregar')][@href='#'][contains(.,'Agregar')]
+    \   Scroll  0  200   
+    \   ${tipo}=   Leer celda  Hoja1  ${i}  1
+    \   ${estatus}=   Leer celda  Hoja1  ${i}  2
+    \   ${nombre_evento}=   Leer celda  Hoja1  ${i}  3
+    \   ${fecha}=   Leer celda  Hoja1  ${i}  4
+    \   ${hora}=   Leer celda  Hoja1  ${i}  5
+    \   ${minuto}=   Leer celda  Hoja1  ${i}  6
+    \   ${informacion}=   Leer celda  Hoja1  ${i}  7
+    \   ${categoria}=   Leer celda  Hoja1  ${i}  8
+    \   SLL  //select[@id='busquedaAltaForm:idSlcTipoEvento']  ${tipo}
+    \   SLL  //select[contains(@id,'busquedaAltaForm:idSlcEstatus')]  ${estatus}
+    \   Texto  //input[@id='busquedaAltaForm:idInputTitulo']  ${nombre_evento}   
+    \   Click   //input[@id='busquedaAltaForm:idInputFecha']
+    \   Click    (//a[@href='#'])[${fecha}]    
+    \   Click   (//input[contains(@type,'text')])[4]
+    \   Click  //div[@class='Hunter-hour-name'][contains(.,'${hora}')]
+    \   Click  //li[@class='Hunter-minute'][contains(.,'${minuto}')]
+    \   Resultado  .5  ${dir}/Evento_excel.png   Datos del evento por excel.
+    \   Scroll  0  400
+    \   Texto   //div[contains(@id,'textBox')]  ${informacion}.
+    \   Scroll  0  800   
+    \   SLL  //select[contains(@id,'busquedaAltaForm:idDependencia')]   ${categoria}
+    \   Dormir  2
+    # Click  //*[@id="busquedaAltaForm:idOrganizacion"]/option[2]    
+    # Click  (//a[@href='#'][contains(.,'Agregar')])[2]
+    # Scroll  0  1600
+    # Dormir  1.5
+    # Click  //a[@href='#'][contains(.,'Guardar')]
+    # Dormir  1
+    # Click  //a[@href='#'][contains(.,'Siguiente')]
+    # #Segunda Sección
+    # Click  //*[@id="representantesAltaForm:idSlcRepresentante"]/option[2]
+    # Click  (//a[@href='#'][contains(.,'Agregar')])[2]
+    # Scroll  0  500
+    # Resultado  .5  ${dir}/Participante_agregado.png   Datos del evento.
+    # Click  //a[@href='#'][contains(.,'Guardar')]
+    # Dormir  1
+    # Scroll  0  600
+    # Click  //a[@href='#'][contains(.,'Siguiente')]
+    # #tercera sección
+    # Scroll  0  300
+    # Click  //a[@href='#'][contains(.,'Nuevo acuerdo')]
+    # Dormir  1.5
+    # Texto  //textarea[contains(@id,'agregaAcuerdoForm:idAcuerdo')]  Demo del primer Acuerdo de prueba
+    # Dormir  1
+    # Click  //a[@id='agregaAcuerdoForm:idBotonAceptar']
+    # Scroll  0  500
+    # Dormir  1.5
+    # Click  //input[contains(@id,'idt58')][@type='checkbox']
+    # Dormir  1.5
+    # #Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
+    # #SLI  //select[@id='idAcuerdosForm:table-elementos:0:idSlcEstatus']  2
+    # Click  //*[@id="idAcuerdosForm:table-elementos:0:idSlcEstatus"]/option[2]
+    # Dormir  1
+    # #carga de los archivos
+    # #Ruta  C:\\Test_ssjae\\test\\Archivos\\Febrero1.pdf
+    # Click  //a[@href='#'][contains(.,'Adjuntar documento')]
+    # Dormir  1.5
+    # Examinar   //input[@id='cargaArchivoForm:file']     C:\\Test_ssjae\\test\\Archivos\\Febrero1.pdf
+    # Dormir  1
+    # Click  //a[@href='#'][contains(.,'Cargar')]
+    # Scroll  0  900
+    # Dormir  1
+    # Click  //a[@href='#'][contains(.,'Adjuntar documento')]
+    # Dormir  1.5
+    # Examinar   //input[@id='cargaArchivoForm:file']     C:\\Test_ssjae\\test\\Archivos\\Febrero2.pdf
+    # Dormir  1.5
+    # Resultado  .5  ${dir}/Carga_pdf.png   Se muestra la Organización
+    # Click  //a[@href='#'][contains(.,'Cargar')]
+    # Scroll  0  900
+    # Dormir  2
+    # Resultado  .5  ${dir}/Mostrar_pdf_pdf.png   Se muestra la Organización
+    # Click  //a[@href='#'][contains(.,'Guardar')]
+    # Dormir  1
+    # Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
+    # Dormir  3
     
 
 
