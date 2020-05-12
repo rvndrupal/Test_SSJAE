@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 #Library     Selenium2Library
 Library     String
-#Library     ReadData.py   #Para poder ller los datos de excel
+Library     ReadData.py   #Para poder ller los datos de excel
 
 ***Variables***
 #${navegador}    chrome

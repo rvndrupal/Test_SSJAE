@@ -16,6 +16,8 @@ Library     FakerLibrary
 #robot -d resultados  tes*.robot
 #pabot --processes 20 --outputdir resultados_uno  TEST/test*.robotc
 
+#excel con pabot
+
 
 ***Variables***
 #${url}          http://10.16.3.29/login
@@ -47,8 +49,8 @@ CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
     Video Finalizar
     Cerrar
 
-CC001 SSJAE (SISTEMA SSJAE 001)(VERSIÓN COMPLETA )
-    [Documentation]    PRUEBA SSJAE 001 (VERSIÓN COMPLETA) 
+CC002 SSJAE (SISTEMA SSJAE 002)(VERSIÓN COMPLETA )
+    [Documentation]    PRUEBA SSJAE 002 (VERSIÓN COMPLETA) 
     [Tags]      ss02   
     Esperar Iniciar ok    15  
     Video Iniciar  
@@ -61,6 +63,23 @@ CC001 SSJAE (SISTEMA SSJAE 001)(VERSIÓN COMPLETA )
     Mostrar evento
     Video Finalizar
     Cerrar
+
+*** Test Cases ***
+CC003 SSJAE (SISTEMA SSJAE 003)(HAPPY PATH EXCEL)
+    [Documentation]    PRUEBA SSJAE 003 (HAPPY PATH EXCEL) 
+    [Tags]      ss03
+    Esperar Iniciar ok    15  
+    #Video Iniciar  
+    Login   ${url}  ${navegador}
+    #Calendario
+    Catalagos Categorías Excel
+    # Catalogos Organizaciones
+    # Catalogos Representantes
+    #Agregar
+    #Mostrar evento
+    #Video Finalizar
+    Cerrar
+
    
     
     

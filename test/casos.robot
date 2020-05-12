@@ -65,6 +65,9 @@ Calendario
     Scroll  0  100
 
 
+
+
+
 Catalagos Categorías
     Click  //a[contains(@id,'j_idt9:linkCatalogos')]
     Scroll  0  150
@@ -80,6 +83,30 @@ Catalagos Categorías
     Texto  //input[contains(@id,'busquedaForm:idBusqueda')]  Demo 
     Click  //a[@href='#'][contains(.,'Buscar')]
     Scroll  0  450
+
+Catalagos Categorías Excel   
+    #Datos de Excel
+    ${rows}=   Leer numero de filas  Hoja1
+    : FOR  ${i}  IN RANGE     1  ${rows}+1
+    \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    \   Scroll  0  150
+    \   Click  //a[@href='#'][contains(.,'Categorías')]
+    \   Click  //a[@href='#'][contains(.,'Agregar categoría')]
+    \   Scroll  0  250
+    \   ${categoria}=   Leer celda  Hoja1  ${i}  1
+    \   ${siglas}=   Leer celda  Hoja1  ${i}  2
+    \   Texto  //input[@id='busquedaAltaForm:idDependencia']  ${categoria}
+    \   Texto  //input[contains(@id,'busquedaAltaForm:idSiglas')]  ${siglas}
+    \   Dormir  2
+    \   Click  //a[@href='#'][contains(.,'Guardar')]
+
+    Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    Scroll  0  150
+    Click  //a[@href='#'][contains(.,'Categorías')]
+    Texto  //input[contains(@id,'busquedaForm:idBusqueda')]  categoría_2
+    Click  //a[@href='#'][contains(.,'Buscar')]   
+    Scroll  0  450
+    Dormir      3
 
 Catalogos Organizaciones
     Click  //a[contains(@id,'j_idt9:linkCatalogos')]
