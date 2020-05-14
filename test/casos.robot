@@ -87,7 +87,7 @@ Catalagos Categorías
 Catalagos Categorías Excel   
     #Datos de Excel
     ${rows}=   Leer numero de filas  Hoja1
-    : FOR  ${i}  IN RANGE     1  ${rows}+1
+    : FOR  ${i}  IN RANGE     1  ${rows}+1    
     \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
     \   Scroll  0  150
     \   Click  //a[@href='#'][contains(.,'Categorías')]
@@ -99,14 +99,16 @@ Catalagos Categorías Excel
     \   Texto  //input[contains(@id,'busquedaAltaForm:idSiglas')]  ${siglas}
     \   Dormir  2
     \   Click  //a[@href='#'][contains(.,'Guardar')]
-
-    Click  //a[contains(@id,'j_idt9:linkCatalogos')]
-    Scroll  0  150
-    Click  //a[@href='#'][contains(.,'Categorías')]
-    Texto  //input[contains(@id,'busquedaForm:idBusqueda')]  categoría_2
-    Click  //a[@href='#'][contains(.,'Buscar')]   
-    Scroll  0  450
-    Dormir      3
+    \   Run Keyword If  '${rows}'==''     Exit For Loop
+   
+    
+    # Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    # Scroll  0  150
+    # Click  //a[@href='#'][contains(.,'Categorías')]
+    # Texto  //input[contains(@id,'busquedaForm:idBusqueda')]   ${categoria}
+    # Click  //a[@href='#'][contains(.,'Buscar')]   
+    # Scroll  0  450
+    # Dormir      3
 
 Catalogos Organizaciones
     Click  //a[contains(@id,'j_idt9:linkCatalogos')]
