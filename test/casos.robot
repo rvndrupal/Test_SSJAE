@@ -16,7 +16,7 @@ ${Organizacion}     Demo Organización
 ${nombre}    Rodrigo
 ${Apellido}     Villanueva
 ${Nieto}        Nieto
-${cargo}        Qa
+
 
 
 
@@ -129,6 +129,36 @@ Catalogos Organizaciones
     Scroll  0  400
     Resultado  .5  ${dir}/Organización.png   Se muestra la Organización
 
+
+#Organizaciones Excel
+Catalogos Organizaciones Excel
+    ${rows}=   Leer numero de filas  Hoja1
+    : FOR  ${i}  IN RANGE     1  ${rows}+1
+    \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    \   Scroll  0  150
+    \   Click  //a[@href='#'][contains(.,'Organizaciones')]
+    \   Scroll  0  250
+    \   Click  //a[@href='#'][contains(.,'Agregar organización')]
+    \   Scroll  0  250
+    \   ${categoria_org}=   Leer celda  Hoja1  ${i}  1
+    \   ${nombre_organizacion}=   Leer celda  Hoja1  ${i}  2
+    \   ${siglas_organizacion}=   Leer celda  Hoja1  ${i}  3
+    \   SLL     //select[contains(@name,'busquedaAltaForm:idDependencia')]   ${categoria_org}
+    \   Texto  //input[contains(@id,'busquedaAltaForm:idOrganizacion')]  ${nombre_organizacion}
+    \   Texto  //input[@id='busquedaAltaForm:idSiglas']  ${siglas_organizacion}
+    \   Dormir  2
+    \   Click  //a[@href='#'][contains(.,'Guardar')]
+    \   Dormir  1
+    \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    \   Scroll  0  150
+    \   Click  //a[@href='#'][contains(.,'Organizaciones')]
+    \   Scroll  0  300
+    \   SLL     //select[@name='busquedaForm:idDependenciaS']   ${categoria_org}
+    \   Click  //a[@href='#'][contains(.,'Buscar')]
+    \   Scroll  0  400
+    \   Resultado  .5  ${dir}/Organización.png   Se muestra la Organización
+
+
 Catalogos Representantes
     Click  //a[contains(@id,'j_idt9:linkCatalogos')]
     Scroll  0  150
@@ -156,6 +186,48 @@ Catalogos Representantes
     Scroll  0  600
     Dormir  1
     Resultado  .5  ${dir}/Representante.png   Se muestra el Representante
+
+
+#Catalogo representantes Excel
+Catalogos Representantes Excel
+    ${rows}=   Leer numero de filas  Hoja1
+    : FOR  ${i}  IN RANGE     1  ${rows}+1
+    \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    \   Scroll  0  150
+    \   Click  //a[@href='#'][contains(.,'Representantes')]
+    \   Click  //a[contains(@id,'idt59:botonAgregar')][@href='#'][contains(.,'Agregar Representantes')]
+    \   Scroll  0  250
+    \   ${categoria_rep}=   Leer celda  Hoja1  ${i}  1
+    \   ${organizacion_rep}=   Leer celda  Hoja1  ${i}  2
+    \   ${nom_rep}=   Leer celda  Hoja1  ${i}  3
+    \   ${pri_rep}=   Leer celda  Hoja1  ${i}  4
+    \   ${seg_rep}=   Leer celda  Hoja1  ${i}  5
+    \   ${cargo}=   Leer celda  Hoja1  ${i}  5
+    \   SLL     //select[contains(@name,'formAltaRepresentante:idDependenciaAlta')]     ${categoria_rep}
+    \   Dormir   1
+    \   SLL     (//select[contains(@class,'form-control')])[2]   ${organizacion_rep}
+    \   Dormir      1
+    \   Texto  //input[contains(@id,'formAltaRepresentante:nombreRepresentante')]   ${nom_rep}
+    \   Texto  //input[contains(@id,'formAltaRepresentante:apellidoPRepresentante')]    ${pri_rep}
+    \   Texto  //input[contains(@id,'formAltaRepresentante:apellidoMRepresentante')]    ${seg_rep}    
+    \   Click    //a[contains(@id,'formAltaRepresentante:idEditar')]
+    \   Dormir  1
+    \   Texto  //input[@id='formAltaRepresentante:idCargo']  ${cargo}
+    \   Dormir      1
+    \   Click  //a[contains(@id,'formAltaRepresentante:idBotonAceptar')]
+    \   Scroll  0  600    
+    \   Click  //a[contains(@id,'formAltaRepresentante:botonGuardar')]
+    \   Dormir  1
+    \   Click  //a[contains(@id,'j_idt9:linkCatalogos')]
+    \   Scroll  0  150
+    \   Click  //a[@href='#'][contains(.,'Representantes')]
+    \   Texto  //input[contains(@id,'busquedaForm:idBusqueda')]  ${nom_rep} 
+    \   Scroll  0  300
+    \   Dormir  1
+    \   Click  //a[@href='#'][contains(.,'Buscar')]
+    \   Scroll  0  600
+    \   Dormir  1
+    \   Resultado  .5  ${dir}/Representante.png   Se muestra el Representante
 
 
 
@@ -342,6 +414,13 @@ Agregar Excel
     # Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     # Dormir  3
     
+
+
+Prueba if 
+    ${TYPE}=    Set Variable    V1
+    Run Keyword If    '${TYPE}' == 'V1'    Log     Testing Variant 1
+    Run Keyword If    '${TYPE}' == 'V2'    Log    Testing Variant 2
+    Run Keyword If    '${TYPE}' == 'V3'    Log    Testing Variant 3
 
 
 

@@ -90,8 +90,10 @@ CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
     #Calendario
     #Catalagos Categorías Excel
     # Catalogos Organizaciones
+    # Catalogos Organizaciones Excel
     # Catalogos Representantes
-    Agregar Excel
+    # Catalogos Representantes Excel
+    #Agregar Excel
     #Mostrar evento
     #Video Finalizar
     Cerrar
