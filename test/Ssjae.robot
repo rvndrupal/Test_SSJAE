@@ -85,17 +85,17 @@ CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
     [Documentation]    PRUEBA SSJAE 004 (HAPPY PATH EXCEL) 
     [Tags]      ss04
     Esperar Iniciar ok    15  
-    #Video Iniciar  
+    Video Iniciar  
     Login   ${url}  ${navegador}
     #Calendario
     Catalagos Categorías Excel
     # Catalogos Organizaciones
-    # Catalogos Organizaciones Excel
+    Catalogos Organizaciones Excel
     # Catalogos Representantes
-    # Catalogos Representantes Excel
+    Catalogos Representantes Excel
     Agregar Excel
     #Mostrar evento
-    #Video Finalizar
+    Video Finalizar
     Cerrar
 
 

@@ -16,6 +16,7 @@ ${Organizacion}     Demo Organización
 ${nombre}    Rodrigo
 ${Apellido}     Villanueva
 ${Nieto}        Nieto
+${reg}      5
 
 
 
@@ -98,8 +99,9 @@ Catalagos Categorías Excel
     \   Texto  //input[@id='busquedaAltaForm:idDependencia']  ${categoria}
     \   Texto  //input[contains(@id,'busquedaAltaForm:idSiglas')]  ${siglas}
     \   Dormir  2
-    \   Click  //a[@href='#'][contains(.,'Guardar')]
-    \   Run Keyword If  '${rows}'==''     Exit For Loop
+    \   Log    ${i}
+    \   Click  //a[@href='#'][contains(.,'Guardar')]    
+    \   Run Keyword If  '${i}'=='${reg}'     Exit For Loop
    
     
     # Click  //a[contains(@id,'j_idt9:linkCatalogos')]
@@ -142,9 +144,9 @@ Catalogos Organizaciones Excel
     \   Scroll  0  250
     \   Click  //a[@href='#'][contains(.,'Agregar organización')]
     \   Scroll  0  250
-    \   ${categoria_org}=   Leer celda  Hoja1  ${i}  1
-    \   ${nombre_organizacion}=   Leer celda  Hoja1  ${i}  2
-    \   ${siglas_organizacion}=   Leer celda  Hoja1  ${i}  3
+    \   ${categoria_org}=   Leer celda  Hoja1  ${i}  13
+    \   ${nombre_organizacion}=   Leer celda  Hoja1  ${i}  15
+    \   ${siglas_organizacion}=   Leer celda  Hoja1  ${i}  16
     \   SLL     //select[contains(@name,'busquedaAltaForm:idDependencia')]   ${categoria_org}
     \   Texto  //input[contains(@id,'busquedaAltaForm:idOrganizacion')]  ${nombre_organizacion}
     \   Texto  //input[@id='busquedaAltaForm:idSiglas']  ${siglas_organizacion}
@@ -159,6 +161,7 @@ Catalogos Organizaciones Excel
     \   Click  //a[@href='#'][contains(.,'Buscar')]
     \   Scroll  0  400
     \   Resultado  .5  ${dir}/Organización.png   Se muestra la Organización
+    \   Run Keyword If  '${i}'=='${reg}'     Exit For Loop
 
 
 Catalogos Representantes
@@ -199,12 +202,12 @@ Catalogos Representantes Excel
     \   Click  //a[@href='#'][contains(.,'Representantes')]
     \   Click  //a[contains(@id,'idt59:botonAgregar')][@href='#'][contains(.,'Agregar Representantes')]
     \   Scroll  0  250
-    \   ${categoria_rep}=   Leer celda  Hoja1  ${i}  1
-    \   ${organizacion_rep}=   Leer celda  Hoja1  ${i}  2
-    \   ${nom_rep}=   Leer celda  Hoja1  ${i}  3
-    \   ${pri_rep}=   Leer celda  Hoja1  ${i}  4
-    \   ${seg_rep}=   Leer celda  Hoja1  ${i}  5
-    \   ${cargo}=   Leer celda  Hoja1  ${i}  5
+    \   ${categoria_rep}=   Leer celda  Hoja1  ${i}  13
+    \   ${organizacion_rep}=   Leer celda  Hoja1  ${i}  15
+    \   ${nom_rep}=   Leer celda  Hoja1  ${i}  18
+    \   ${pri_rep}=   Leer celda  Hoja1  ${i}  19
+    \   ${seg_rep}=   Leer celda  Hoja1  ${i}  20
+    \   ${cargo}=   Leer celda  Hoja1  ${i}  17
     \   SLL     //select[contains(@name,'formAltaRepresentante:idDependenciaAlta')]     ${categoria_rep}
     \   Dormir   1
     \   SLL     (//select[contains(@class,'form-control')])[2]   ${organizacion_rep}
@@ -230,6 +233,7 @@ Catalogos Representantes Excel
     \   Scroll  0  600
     \   Dormir  1
     \   Resultado  .5  ${dir}/Representante.png   Se muestra el Representante
+    \   Run Keyword If  '${i}'=='${reg}'     Exit For Loop
 
 
 
@@ -347,9 +351,13 @@ Agregar Excel
     \   ${hora}=   Leer celda  Hoja1  ${i}  5
     \   ${minuto}=   Leer celda  Hoja1  ${i}  6
     \   ${informacion}=   Leer celda  Hoja1  ${i}  7
-    \   ${categoria}=   Leer celda  Hoja1  ${i}  8
-    \   ${organizacion}=   Leer celda  Hoja1  ${i}  9
-    \   ${repres}=   Leer celda  Hoja1  ${i}  10
+    \   ${categoria}=   Leer celda  Hoja1  ${i}  13
+    \   ${organizacion}=   Leer celda  Hoja1  ${i}  15
+    \   ${nom_rep}=   Leer celda  Hoja1  ${i}  18
+    \   ${pri_rep}=   Leer celda  Hoja1  ${i}  19
+    \   ${seg_rep}=   Leer celda  Hoja1  ${i}  20
+    \   ${cargo}=   Leer celda  Hoja1  ${i}  17
+    \   ${repres}=    Leer celda  Hoja1  ${i}  21
     \   ${acuerdo}=   Leer celda  Hoja1  ${i}  11
     \   ${estatus}=   Leer celda  Hoja1  ${i}  12
     \   SLL  //select[@id='busquedaAltaForm:idSlcTipoEvento']  ${tipo}
@@ -421,6 +429,7 @@ Agregar Excel
     \   Dormir  1
     \   Resultado  .5  ${dir}/Termina_carga.png   Se muestra la Organización
     \   Dormir  1.5
+    \   Run Keyword If  '${i}'=='${reg}'     Exit For Loop
     
 
 
