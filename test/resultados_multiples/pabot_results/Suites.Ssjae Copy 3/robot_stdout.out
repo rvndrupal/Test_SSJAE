@@ -1,0 +1,17 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Ssjae Copy 3 :: Casos de Prueba Proyecto SSJAE                         
+==============================================================================
+CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL) :: PRUEBA SSJAE ... | FAIL |
+ValueError: I/O operation on closed file.
+------------------------------------------------------------------------------
+Suites.Ssjae Copy 3 :: Casos de Prueba Proyecto SSJAE                 | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Test_ssjae\test\resultados_multiples\pabot_results\Suites.Ssjae Copy 3\output.xml

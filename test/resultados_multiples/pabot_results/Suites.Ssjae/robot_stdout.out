@@ -1,0 +1,16 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Ssjae :: Casos de Prueba Proyecto SSJAE                                
+==============================================================================
+CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL) :: PRUEBA SSJAE ... | PASS |
+------------------------------------------------------------------------------
+Suites.Ssjae :: Casos de Prueba Proyecto SSJAE                        | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Test_ssjae\test\resultados_multiples\pabot_results\Suites.Ssjae\output.xml

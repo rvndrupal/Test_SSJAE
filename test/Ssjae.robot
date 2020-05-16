@@ -9,12 +9,13 @@ Library     FakerLibrary
 
 
 
-#robot -d resultados -i ss01  ssjae.robot
+#robot -d resultados -i ss04  ssjae.robot
 #robot -d resultados -i rd01 -i rd02  -v navegador:firefox  test.robot
 #robot -d resultados  test.robot
 #Vinr770919hdfltd00
 #robot -d resultados  tes*.robot
-#pabot --processes 20 --outputdir resultados_uno  TEST/test*.robotc
+#pabot --processes 20 --outputdir resultados_uno  TEST/test*.robot
+#pabot --processes 2 --outputdir  resultados_multiples  ssjae*.robot
 
 #excel con pabot
 
@@ -34,60 +35,60 @@ ${tiempo}   .1
     
 
 *** Test Cases ***
-CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
-    [Documentation]    PRUEBA SSJAE 001 (HAPPY PATH) 
-    [Tags]      ss01   
-    Esperar Iniciar ok    15  
-    Video Iniciar  
-    Login   ${url}  ${navegador}
-    Calendario
-    # Catalagos Categorías
-    # Catalogos Organizaciones
-    # Catalogos Representantes
-    Agregar
-    Mostrar evento
-    Video Finalizar
-    Cerrar
+# CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH)
+#     [Documentation]    PRUEBA SSJAE 001 (HAPPY PATH) 
+#     [Tags]      ss01   
+#     Esperar Iniciar ok    15  
+#     Video Iniciar  
+#     Login   ${url}  ${navegador}
+#     Calendario
+#     # Catalagos Categorías
+#     # Catalogos Organizaciones
+#     # Catalogos Representantes
+#     Agregar
+#     Mostrar evento
+#     Video Finalizar
+#     Cerrar
 
-CC002 SSJAE (SISTEMA SSJAE 002)(VERSIÓN COMPLETA )
-    [Documentation]    PRUEBA SSJAE 002 (VERSIÓN COMPLETA) 
-    [Tags]      ss02   
-    Esperar Iniciar ok    15  
-    Video Iniciar  
-    Login   ${url}  ${navegador}
-    Calendario
-    Catalagos Categorías
-    Catalogos Organizaciones
-    Catalogos Representantes
-    Agregar
-    Mostrar evento
-    Video Finalizar
-    Cerrar
+# CC002 SSJAE (SISTEMA SSJAE 002)(VERSIÓN COMPLETA )
+#     [Documentation]    PRUEBA SSJAE 002 (VERSIÓN COMPLETA) 
+#     [Tags]      ss02   
+#     Esperar Iniciar ok    15  
+#     Video Iniciar  
+#     Login   ${url}  ${navegador}
+#     Calendario
+#     Catalagos Categorías
+#     Catalogos Organizaciones
+#     Catalogos Representantes
+#     Agregar
+#     Mostrar evento
+#     Video Finalizar
+#     Cerrar
 
-*** Test Cases ***
-CC003 SSJAE (SISTEMA SSJAE 003)(Categorías)
-    [Documentation]    PRUEBA SSJAE 003 (Carga Categorías) 
-    [Tags]      ss03
-    Esperar Iniciar ok    15  
-    #Video Iniciar  
-    Login   ${url}  ${navegador}
-    #Calendario
-    Catalagos Categorías Excel
-    # Catalogos Organizaciones
-    # Catalogos Representantes
-    #Agregar
-    #Mostrar evento
-    #Video Finalizar
-    Cerrar
+# *** Test Cases ***
+# CC003 SSJAE (SISTEMA SSJAE 003)(Categorías)
+#     [Documentation]    PRUEBA SSJAE 003 (Carga Categorías) 
+#     [Tags]      ss03
+#     Esperar Iniciar ok    15  
+#     #Video Iniciar  
+#     Login   ${url}  ${navegador}
+#     #Calendario
+#     Catalagos Categorías Excel
+#     # Catalogos Organizaciones
+#     # Catalogos Representantes
+#     #Agregar
+#     #Mostrar evento
+#     #Video Finalizar
+#     Cerrar
 
 *** Test Cases ***
 CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
     [Documentation]    PRUEBA SSJAE 004 (HAPPY PATH EXCEL) 
     [Tags]      ss04
-    Esperar Iniciar ok    15  
+    Esperar Iniciar ok    25  
     Video Iniciar  
     Login   ${url}  ${navegador}
-    #Calendario
+    Calendario
     Catalagos Categorías Excel
     # Catalogos Organizaciones
     Catalogos Organizaciones Excel

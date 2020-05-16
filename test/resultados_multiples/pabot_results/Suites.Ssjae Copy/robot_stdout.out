@@ -1,0 +1,18 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Ssjae Copy :: Casos de Prueba Proyecto SSJAE                           
+==============================================================================
+CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL) :: PRUEBA SSJAE ... | FAIL |
+StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.138)
+------------------------------------------------------------------------------
+Suites.Ssjae Copy :: Casos de Prueba Proyecto SSJAE                   | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Test_ssjae\test\resultados_multiples\pabot_results\Suites.Ssjae Copy\output.xml

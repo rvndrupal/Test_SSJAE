@@ -1,0 +1,26 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Ssjae :: Casos de Prueba Proyecto SSJAE                                
+==============================================================================
+CC001 SSJAE (SISTEMA SSJAE 001)(HAPPY PATH) :: PRUEBA SSJAE 001 (H... | FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+CC002 SSJAE (SISTEMA SSJAE 002)(VERSIÓN COMPLETA ) :: PRUEBA SSJAE... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+CC003 SSJAE (SISTEMA SSJAE 003)(Categorías) :: PRUEBA SSJAE 003 (C... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL) :: PRUEBA SSJAE ... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Suites.Ssjae :: Casos de Prueba Proyecto SSJAE                        | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Suites                                                                | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Output:  C:\Test_ssjae\test\resultados\pabot_results\Suites.Ssjae\output.xml
