@@ -1,0 +1,12 @@
+Envío URL del Sistema de Seguimiento de Juntas y Asuntos Estratégicos (SSJAE) en el ambiente de liberación:
+
+https://libssl.senasica.gob.mx/SSJAEWeb/login.xhtml
+
+
+Usuarios:
+olivia.rodriguez
+eugenia.villanueva
+
+Contraseña para ambos:
+senaint2020
+

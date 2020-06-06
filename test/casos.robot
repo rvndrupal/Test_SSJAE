@@ -16,7 +16,11 @@ ${Organizacion}     Demo Organización
 ${nombre}    Rodrigo
 ${Apellido}     Villanueva
 ${Nieto}        Nieto
-${reg}      5
+${usr1}     olivia.rodriguez
+${usr2}     eugenia.villanueva
+${pass1}    senaint2020
+
+${reg}      2
 
 
 
@@ -38,14 +42,16 @@ Login
     Click  (//button[contains(.,'Enviar')])[1]
     Dormir    3
     Scroll  0  250
-    Texto  //input[contains(@id,'j_username')]      olivia.rodriguez
-    Texto   //input[contains(@id,'j_password')]     senades2020
+    Texto  //input[contains(@id,'j_username')]      ${usr1}
+    Texto   //input[contains(@id,'j_password')]     ${pass1}
     Resultado  .5  ${dir}/Login_password.png   Se introducen los datos para el Login
     Click  (//button[contains(.,'Enviar')])[1]
     Scroll  0  500
     Dormir  1
     Scroll  0   150
     Resultado  .5  ${dir}/Calendario.png   Se muestra el calendario
+
+
 
 
 Calendario
@@ -144,6 +150,7 @@ Catalogos Organizaciones Excel
     \   Scroll  0  250
     \   Click  //a[@href='#'][contains(.,'Agregar organización')]
     \   Scroll  0  250
+    \   Dormir  2
     \   ${categoria_org}=   Leer celda  Hoja1  ${i}  13
     \   ${nombre_organizacion}=   Leer celda  Hoja1  ${i}  15
     \   ${siglas_organizacion}=   Leer celda  Hoja1  ${i}  16

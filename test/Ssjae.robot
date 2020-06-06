@@ -9,22 +9,29 @@ Library     FakerLibrary
 
 
 
-#robot -d resultados -i ss04  ssjae.robot
+#robot -d resultados -i ss04  -v usr1:olivia.rodriguez  ssjae.robot
 #robot -d resultados -i rd01 -i rd02  -v navegador:firefox  test.robot
 #robot -d resultados  test.robot
 #Vinr770919hdfltd00
 #robot -d resultados  tes*.robot
 #pabot --processes 20 --outputdir resultados_uno  TEST/test*.robot
-#pabot --processes 2 --outputdir  resultados_multiples  ssjae*.robot
 
+#robot -d resultados -i ss04 ssjae.robot
+
+
+
+#pabot --processes 2 --outputdir  resultados_multiples  ssjae*.robot
 #excel con pabot
 
 
 ***Variables***
 #${url}          http://10.16.3.29/login
-${url}          https://dessistemas.senasica.gob.mx/SSJAEWeb/login.xhtml
+# ${url}          https://dessistemas.senasica.gob.mx/SSJAEWeb/login.xhtml
+${url}          https://libssl.senasica.gob.mx/SSJAEWeb/login.xhtml    
+#produccion
 ${navegador}    chrome
 ${tiempo}   .1
+
 
 #user         olivia.rodriguez
 #Password     senades2020
@@ -85,7 +92,7 @@ ${tiempo}   .1
 CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
     [Documentation]    PRUEBA SSJAE 004 (HAPPY PATH EXCEL) 
     [Tags]      ss04
-    Esperar Iniciar ok    25  
+    Esperar Iniciar ok    35 
     Video Iniciar  
     Login   ${url}  ${navegador}
     Calendario
@@ -98,6 +105,7 @@ CC004 SSJAE (SISTEMA SSJAE 004)(HAPPY PATH EXCEL)
     #Mostrar evento
     Video Finalizar
     Cerrar
+
 
 
    
